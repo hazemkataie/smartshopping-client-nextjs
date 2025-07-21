@@ -1,4 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 Targro
+
+**Targro** is a web application designed to help users create **market-specific shopping lists**, making it easier to organize what to buy from which store.
+
+---
+
+## 🚀 Features (In Progress)
+
+- Create shopping lists by market
+- Add, update, and delete items
+- Responsive user interface
+
+---
+
+## 🔧 Tech Stack
+
+- **Frontend**: [Next.js](https://nextjs.org/)
+- **Backend**: [NestJS](https://nestjs.com/)
+- **Database**: PostgreSQL
+
+---
+
+## 🗺️ Roadmap / Next Features
+
+✅ Core list structure  
+🔲 User authentication system  
+🔲 Cross-market comparison  
+🔲 Dark/Light theme support  
+🔲 Shareable shopping lists  
+
+> This section will be updated regularly as development progresses.
+
+---
 
 ## Getting Started
 
