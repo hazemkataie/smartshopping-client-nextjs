@@ -13,10 +13,9 @@ export default function MarketListPage() {
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
 
-  // Veri çekme
   const fetchMarkets = async () => {
     try {
-      const res = await fetch("http://localhost:4000/markets");
+      const res = await fetch("http://localhost:4000/market");
       const data = await res.json();
       setMarkets(data);
     } catch (err) {
@@ -28,13 +27,12 @@ export default function MarketListPage() {
     fetchMarkets();
   }, []);
 
-  // Form gönderimi
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name || !address) return;
 
     try {
-      const res = await fetch("http://localhost:4000/markets", {
+      const res = await fetch("http://localhost:4000/market", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, address }),
@@ -43,7 +41,7 @@ export default function MarketListPage() {
       if (res.ok) {
         setName('');
         setAddress('');
-        fetchMarkets(); // Listeyi güncelle
+        fetchMarkets(); 
       }
     } catch (err) {
       console.error("Market eklenemedi:", err);
@@ -81,7 +79,7 @@ export default function MarketListPage() {
         </button>
       </form>
 
-      {/* Liste */}
+      {/* List */}
       <ul className="space-y-2">
         {markets.map((market) => (
           <li key={market.id} className="border p-2 rounded shadow">
